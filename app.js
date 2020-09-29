@@ -13,13 +13,15 @@ var passport=require("passport");
 var localStrategy=require("passport-local");
 const axios = require('axios');
 var methodOverride=require("method-override");
-// mongoose.connect('mongodb://localhost:27017/yelp12', {
-	mongoose.connect('mongodb+srv://moviebuster:moviebuster@moviebuster.xm21i.mongodb.net/moviebuster?retryWrites=true&w=majority', {
+var url=process.env.DATABASEURL || "mongodb://localhost:27017/yelp12"
+	mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
+
+// mongodb+srv://moviebuster:moviebuster@moviebuster.xm21i.mongodb.net/moviebuster?retryWrites=true&w=majority
 //SCHEMA SETUP
 var Campgrnd=require("./models/campground.js");
 var seedDB=require("./seeds.js");
@@ -98,21 +100,9 @@ app.get("/results/:movieID",function(req,res){
 	
 });
 
+
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log("Server Has Started!");
 });
 
-// RESTFUl ROUTEs
-
-// name    url         verb   disc
-
-// ===============================
-
-// INDEX   /dogs       GET     display list of dogs
-
-// NEW     /dogs/news  POST    display form to make new dogs
-
-// CREATE  /dogs       POST    Create a new dog
-
-// SHOW    /dogs/:id   GEt     Shows info about dog
