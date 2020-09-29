@@ -1,0 +1,44 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+	<div data-aos="fade-right">
+	<header class="jumbotron">
+		<h1 style="color:white;text-shadow: 2px 2px #ff0000;"><i class="fa fa-smile-o" aria-hidden="true"> What's your review?</i></h1>
+	
+	<h2 class="title">
+		An open platform for movie reviews
+		</h2>	
+		<p>
+			<a class= "btn btn-primary btn large"href="/campgrounds/new"> ADD YOUR REVIEW</a>
+		</p>
+		
+	
+	</header>
+	</div>
+	
+	<div class="row text-center">
+		<% campgrounds.forEach(function(cg){%>
+		<div data-aos="zoom-in">
+		<div class="col-md-4 col-sm-6">
+			
+			
+			<div class="thumbnail">
+				<img style="height:200px;" src="<%= cg.image %>" >
+							<h4 class="title"><%= cg.name %></h4>
+				<p>
+				
+			<a href="/campgrounds/<%= cg._id %>" class="btn btn-primary">More info</a>
+			</p>
+			
+				
+			</div>
+			
+			
+		 </div>
+		<%});%>
+	</div>
+	
+</div>
+</div>
+
+<%- include("../partials/footer") %>

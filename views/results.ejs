@@ -1,0 +1,31 @@
+<%- include("./partials/header") %>
+
+		 <h1 class="text-center" style="color:white;margin-bottom:100px;"> Your search result for <%= name%></h1> 
+
+		
+		<div class="container">
+			
+		<div class="row text-center">
+		<% data.Search.forEach(function(movie){%>
+		<div data-aos="zoom-in">
+		<div class="col-md-3 col-sm-6">
+			
+			
+			<div class="thumbnail height">
+				<img style="height:200px;" src="<%= movie.Poster %>" >
+							<h4 class="title"><%= movie.Title %></h4>
+			<div class="white"> 
+		Released in the year <%= movie.Year %>
+		
+		</div> 
+			
+				
+			</div>
+			
+			
+		 </div>
+		<%});%>
+	</div>
+			
+</div>
+<%- include("./partials/footer") %>

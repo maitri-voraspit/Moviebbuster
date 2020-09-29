@@ -1,0 +1,35 @@
+<%- include("../partials/header") %>
+<div class="container">
+	<div class="row">
+		<h1 class="text-center"> </h1>
+		<div style="width:30%; margin:20px auto" >
+
+<h1 class="text-center" style="color:white;"> Add your reviews </h1>
+			<form action="/campgrounds" method="POST" >
+				<div class="form-group">
+					<input class="form-control" type="text" placeholder="Movie name" name="name" >
+				</div>
+				<div class="form-group">
+				<input class="form-control" type="number" placeholder="Stars(1 to 5)" name="price" min="1" step="0.1" max="5" >
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="text" placeholder="image url" name="image">
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="text" placeholder=" Your review" name="description">
+			</div>
+				
+			<div class="form-group">
+				<button class="btn btn-lg btn-block btn-primary">Submit</button>
+			</div>
+				
+			</form>
+			<a href="/campgrounds">GO BACK </a>
+		</div>
+	
+	</div>
+
+</div>
+
+
+<%- include("../partials/footer") %>

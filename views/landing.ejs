@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moviebustur</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css"> 
+		 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async>.//for making our wepage compatile with older versio browsers</script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </head>
+    <body>
+    
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+
+    <div id="landing-header">
+		<div data-aos="flip-up">
+		<div id="box">
+			<strong ><h1 class="up"><i class="fa fa-film" aria-hidden="true"> Welcome to Moviebuster</i></h1></strong>
+		<a href="/campgrounds" class="btn btn-lg btn-success">View All Reviews</a>
+    </div>
+			</div>
+		
+		</div>
+ 	
+    
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+<%- include("./partials/footer") %>
