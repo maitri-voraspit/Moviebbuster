@@ -1,11 +1,22 @@
- 
-foot{
-	background-color:white;
-	
+ html,body{
+	width:100%;
+	height:100%;
 }
+/* .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
 
+  width: 100%;
+  background-color: black;
+  color: white;
+
+} */
+
+body { padding-bottom: 70px; }
 .thumbnail .height{
 	height:1000px;
+	
 }
 ul li a.hov:hover{
 	background-color:rgba(199, 15, 2,0.6) !important;
@@ -17,10 +28,7 @@ ul li a.hov:hover{
 	margin-top:30px;
 }
 
-html,body{
-	width:100%;
-	height:100%;
-}
+
 body nav container-fluid #brand{
 	color:white;
 }
@@ -55,6 +63,7 @@ body nav container-fluid #brand{
 background:rgba(0,0,0,1);
 	padding:0;
 	border:black;
+	
 }
 .thumbnail .caption-full{
 	padding:7px;
