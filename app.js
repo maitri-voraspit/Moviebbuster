@@ -13,7 +13,8 @@ var passport=require("passport");
 var localStrategy=require("passport-local");
 const axios = require('axios');
 var methodOverride=require("method-override");
-mongoose.connect('mongodb://localhost:27017/yelp12', {
+// mongoose.connect('mongodb://localhost:27017/yelp12', {
+	mongoose.connect('mongodb+srv://moviebuster:moviebuster@moviebuster.xm21i.mongodb.net/moviebuster?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
